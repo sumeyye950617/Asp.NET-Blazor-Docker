@@ -1,0 +1,89 @@
+﻿@page "/courselist"
+
+
+@using Codelab.Models
+@using Codelab.BLL.Contracts
+
+@inject ICourseRepository _courseRepository
+@inject NavigationManager _navigationManger
+
+@attribute [Authorize]
+<div class="col-3">
+    <h5>Kurs Listesi</h5>
+    <br />
+    <NavLink href="course/createorupdate" class="btn btn-success">Kurs Ekle</NavLink>
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">İsim</th>
+                    <th scope="col">Fiyat</th>
+                    <th scope="col">Açıklaması</th>
+                    <th scope="col">Başlık</th>
+                    <th scope="col">Aktif Mi</th>
+                    <th scope="col">Güncelle</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @if (CourseModelList.Any())
+                {
+                    foreach (var course in CourseModelList)
+                    {
+                        <tr>
+                            <th>@course.Name</th>
+                            <td>@course.CoursePrice</td>
+                            <td>@course.Description</td>
+                            <td>@course.Title</td>
+                            @if (course.IsActive)
+                            {
+                                <td>
+                                    Aktif
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    Pasif
+                                </td>
+                            }
+                            <td>
+                                <NavLink href="@($"/course/edit/{course.Id}")" class="btn btn-primary"> Güncelle</NavLink>
+                            </td>
+
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6">@ErrorMessage</td>
+                    </tr>
+
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+@code {
+
+    private IEnumerable<CourseDto> CourseModelList { get; set; } = new List<CourseDto>();
+    private IEnumerable<CourseDto> courseList = Enumerable.Empty<CourseDto>();
+
+    public string ErrorMessage { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var data = await _courseRepository.GetAllCourse();
+        if (!data.IsSuccess)
+            ErrorMessage = data.Message;
+        else
+            CourseModelList = data.Data;
+    }
+}

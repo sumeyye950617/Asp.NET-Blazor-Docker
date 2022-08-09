@@ -1,0 +1,12 @@
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\bin\Release\net5.0\Codelab.Common.deps.json
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\bin\Release\net5.0\Codelab.Common.dll
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\bin\Release\net5.0\ref\Codelab.Common.dll
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\bin\Release\net5.0\Codelab.Common.pdb
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\Codelab.Common.csproj.AssemblyReference.cache
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\Codelab.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\Codelab.Common.AssemblyInfoInputs.cache
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\Codelab.Common.AssemblyInfo.cs
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\Codelab.Common.csproj.CoreCompileInputs.cache
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\Codelab.Common.dll
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\ref\Codelab.Common.dll
+C:\Users\Lenovo\source\repos\CodelabProjem\Codelab.Common\obj\Release\net5.0\Codelab.Common.pdb
